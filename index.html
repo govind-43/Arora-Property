@@ -162,6 +162,8 @@ footer{background:#0E2420;color:#B9C9C4;padding:80px 0 30px;font-size:.9rem}
 .fg{display:grid;grid-template-columns:1.5fr repeat(5,1fr);gap:30px}.fg h4{color:#fff;font:700 .75rem var(--sans);letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}  
 .fg ul{list-style:none;display:grid;gap:9px}.fg a:hover{color:#E7B48F}.soc{display:flex;gap:10px;margin-top:18px}.soc a{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;transition:.3s}.soc a:hover{background:var(--cop);border-color:var(--cop);color:#fff}.soc svg{width:18px}  
 .fb{border-top:1px solid rgba(255,255,255,.12);margin-top:50px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem}.fb a{margin-left:18px}  
+  .credit{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);text-align:center;font-size:.78rem;color:#8FA39D;letter-spacing:.08em}
+.credit b{color:#E7B48F;font-weight:700;letter-spacing:.14em}
 .fab{position:fixed;right:18px;bottom:18px;z-index:40;display:grid;gap:12px}  
 .fab a,.fab button{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.4);transition:.35s var(--ease)}.fab a:hover,.fab button:hover{transform:translateY(-4px) scale(1.05)}  
 .wa{background:#25D366;color:#fff}.call{background:var(--ink);color:#fff;display:none!important}.top{background:var(--card);color:var(--ink);opacity:0;pointer-events:none;transform:translateY(10px)}.top.show{opacity:1;pointer-events:auto;transform:none}  
@@ -216,12 +218,11 @@ body.hero-in .hero h1 em:after{content:"";position:absolute;left:0;right:0;botto
 @keyframes heroLine{to{transform:scaleX(1)}}
 
 /* ---------- ADD-ON 2 : Tap animation on all card sections ---------- */
-.tap{animation:tapPop .48s var(--ease)}
+.tap{animation:tapPop .42s var(--ease)}
 @keyframes tapPop{
   0%{transform:scale(1);box-shadow:0 0 0 0 rgba(184,102,58,.55)}
-  30%{transform:scale(.965);box-shadow:0 0 0 7px rgba(184,102,58,.22)}
-  65%{transform:scale(1.015);box-shadow:0 0 0 12px rgba(184,102,58,0)}
-  100%{transform:scale(1);box-shadow:0 0 0 0 rgba(184,102,58,0)}
+  35%{transform:scale(.975);box-shadow:0 0 0 8px rgba(184,102,58,.24)}
+  100%{transform:scale(1);box-shadow:0 0 0 14px rgba(184,102,58,0)}
 }
 
 /* ---------- ADD-ON 3 : Sold / Rented badge on property cards ---------- */
@@ -255,7 +256,7 @@ body.hero-in .hero h1 em:after{content:"";position:absolute;left:0;right:0;botto
 <section class="hero" id="home">  
 <div class="bg" id="hbg"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=75" alt="Modern luxury home with warm evening lighting" fetchpriority="high" onerror="this.remove()"></div>  
 <div class="wrap">  
-<span class="eyebrow">Exceptional properties. Extraordinary living.</span>  
+<span class="eyebrow">Exceptional properties. | Extraordinary living.</span>  
 <h1>Find a Place Worth <em>Calling Home.</em></h1>  
 <p>Arora Properties helps families and investors buy, rent and sell across Gagan Vihar, Mausam Vihar, Krishna Nagar and Preet Vihar — with honest advice and a personal touch.</p>  
 <div class="acts"><a href="#properties" class="btn p mag">Explore Properties <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#contact" class="btn o">Schedule a Consultation</a></div>  
@@ -312,7 +313,10 @@ body.hero-in .hero h1 em:after{content:"";position:absolute;left:0;right:0;botto
 <div class="map rv"><iframe title="Arora Properties office location" loading="lazy" src="https://www.google.com/maps?q=Arora+Properties+327+Gagan+Vihar+Delhi+110051&output=embed"></iframe>  
 <div class="in2"><span class="eyebrow">Visit our office</span><h3>Arora Properties</h3><p style="color:var(--mut)">327 Gagan Vihar, opposite D.A.V. School, Mausam Vihar, Krishna Nagar, Delhi 110051</p>  
 <a class="btn d" target="_blank" rel="noopener" href="https://maps.app.goo.gl/5PvASCaqjQgHMqgo8">Get Directions</a><a class="btn o" style="color:var(--ink)" data-tel href="#">Call Now</a><a class="btn o" style="color:var(--ink)" data-wa target="_blank" rel="noopener" href="#">WhatsApp</a></div></div></div></section>  
-</main>  <footer><div class="wrap"><div class="fg">  
+</main>  
+  
+<footer>
+<div class="wrap"><div class="fg">  
 <div><a href="#home" class="logo" style="color:#fff"><b>A</b><span>Arora<small>Properties</small></span></a><p style="margin-top:16px;max-width:260px">Premium homes and honest advice across East Delhi.</p>  
 <div class="soc"><a href="#" aria-label="Instagram"><svg class="i" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a><a href="#" aria-label="Facebook"><svg class="i" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a><a href="#" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24"><path d="M6 9v10M6 5v1M11 19v-6a3 3 0 0 1 6 0v6M11 9v10"/></svg></a><a href="#" data-wa aria-label="WhatsApp"><svg class="i" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg></a></div></div>  
 <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#about">Our Team</a></li><li><a href="#contact">Careers</a></li><li><a href="#contact">Contact</a></li></ul></div>  
@@ -320,7 +324,11 @@ body.hero-in .hero h1 em:after{content:"";position:absolute;left:0;right:0;botto
 <div><h4>Services</h4><ul><li><a href="#services">Property Management</a></li><li><a href="#services">Valuation</a></li><li><a href="#services">Investment Advisory</a></li><li><a href="#services">Commercial</a></li></ul></div>  
 <div><h4>Resources</h4><ul><li><a href="#insights">Blog</a></li><li><a href="#insights">Market Insights</a></li><li><a href="#insights">Buying Guide</a></li><li><a href="#insights">Selling Guide</a></li><li><a href="#faq">FAQ</a></li></ul></div>  
 <div><h4>Contact</h4><ul id="fc"></ul></div></div>  
-<div class="fb"><span>© 2026 Arora Properties. All Rights Reserved.</span><span><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></span></div></div></footer>  <div class="mcta"><button class="btn p" data-book>Schedule a Viewing</button></div>  
+<div class="fb"><span>© 2026 Arora Properties. All Rights Reserved.</span><span><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></span></div></div>
+<div class="credit">Created by <b>GOVIND WEB STUDIO</b></div>
+</footer>  
+  
+<div class="mcta"><button class="btn p" data-book>Schedule a Viewing</button></div>  
 <div class="fab"><a class="wa" data-wa target="_blank" rel="noopener" aria-label="Chat on WhatsApp" href="#"><svg class="i" viewBox="0 0 24 24" style="width:28px;height:28px"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7zM9 9c0 3 3 6 6 6l1-2-2-1-1 .8c-.8-.4-1.4-1-1.8-1.8L12 10l-1-2z"/></svg></a><a class="call" data-tel aria-label="Call us" href="#"><svg class="i" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a><button class="top" id="top" aria-label="Back to top"><svg class="i" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button></div>  <div class="ov" id="pm" role="dialog" aria-modal="true" aria-label="Property details"><div class="md" id="pmb"></div></div>  
 <div class="ov" id="bm" role="dialog" aria-modal="true" aria-label="Schedule a viewing"><div class="md sm"><button class="x" data-close aria-label="Close">✕</button>  
 <form id="bf" novalidate style="display:grid;gap:14px"><span class="eyebrow" style="margin:0">Private viewing</span><h3 style="font-size:2rem">Schedule a Viewing</h3>  
@@ -355,13 +363,13 @@ const U=(id,w=900)=>`https://images.unsplash.com/photo-${id}?auto=format&fit=cro
 const P=[  
 {id:"courtyard-residence",name:"The Courtyard Residence",loc:"Gagan Vihar",type:"Luxury Villas",mode:"buy",price:620,beds:4,baths:4,area:3200,park:3,year:2022,furn:"Semi-furnished",pop:95,date:"2026-09-20",feat:1,imgs:["1613490493576-7fde63acd811","1600585154340-be6161a56a0c","1600607687939-ce8a6c25118c"],desc:"A statement corner home with a private courtyard, double-height living room and a terrace garden — built for families who value space and light.",am:["Parking","Security","Garden","Balcony","Power Backup","Smart Home"]},  
 {id:"skyline-penthouse",name:"Skyline Penthouse",loc:"Preet Vihar",type:"Penthouses",mode:"buy",price:895,beds:4,baths:5,area:3800,park:3,year:2024,furn:"Furnished",pop:90,date:"2026-09-28",feat:1,imgs:["1545324418-cc1a3fa10c00","1502672260266-1c1ef2d93688","1600566753190-17f0baa2a6c3"],desc:"Wrap-around terraces, floor-to-ceiling glazing and skyline views, minutes from Preet Vihar Metro. Fully furnished with designer interiors.",am:["Swimming Pool","Gym","Parking","Security","Air Conditioning","Clubhouse","Smart Home"]},  
-{id:"mausam-vihar-floor",name:"Mausam Vihar Builder Floor",loc:"Mausam Vihar",type:"Apartments",mode:"buy",price:185,beds:3,baths:3,area:1650,park:1,year:2021,furn:"Unfurnished",pop:80,date:"2026-09-12",feat:1,imgs:["1564013799919-ab600027ffc6","1600596542815-ffad4c1539a9","1512917774080-9991f1c4c750"],desc:"A bright, ventilated third-floor home near D.A.V. School and Mausam Vihar Park, with lift, stilt parking and a sunlit balcony.",am:["Parking","Security","Balcony","Power Backup"]},  
-{id:"modern-corner-home",name:"Modern Corner Home",loc:"Krishna Nagar",type:"Modern Homes",mode:"buy",price:340,beds:4,baths:3,area:2400,park:2,year:2023,furn:"Semi-furnished",pop:76,date:"2026-10-01",feat:0,imgs:["1580587771525-78b9dba3b914","1512917774080-9991f1c4c750","1600585154340-be6161a56a0c"],desc:"Clean lines, a modular kitchen and a rooftop lounge in a well-connected pocket of Krishna Nagar. Move-in ready.",am:["Parking","Garden","Balcony","Air Conditioning","Power Backup"]},  
-{id:"park-facing-3bhk",name:"Park-Facing 3 BHK",loc:"Gagan Vihar",type:"Apartments",mode:"rent",price:1.1,priceTxt:"₹1.1 L / mo",beds:3,baths:2,area:1500,park:1,year:2020,furn:"Furnished",pop:70,date:"2026-09-30",feat:0,imgs:["1502672260266-1c1ef2d93688","1600607687939-ce8a6c25118c","1564013799919-ab600027ffc6"],desc:"A fully furnished, park-facing home on a quiet street — ideal for professionals and families seeking a turn-key lease.",am:["Parking","Security","Balcony","Air Conditioning","Power Backup"]},  
-{id:"prime-retail-frontage",name:"Prime Retail Frontage",loc:"Krishna Nagar",type:"Commercial Properties",mode:"buy",price:450,beds:0,baths:2,area:1800,park:4,year:2019,furn:"Unfurnished",pop:65,date:"2026-08-25",feat:0,imgs:["1486406146926-c627a92ad1ab","1497366216548-37526070297c","1577495508048-b635879837f1"],desc:"A high-footfall ground-floor showroom on a main road with double-height ceilings and dedicated customer parking.",am:["Parking","Security","Power Backup","Air Conditioning"]}  
+{id:"mausam-vihar-floor",name:"Mausam Vihar Builder Floor",loc:"Mausam Vihar",type:"Apartments",mode:"buy",price:185,beds:3,baths:3,area:1650,park:1,year:2021,furn:"Unfurnished",pop:80,date:"2026-09-12",feat:1,st:"sold",imgs:["1564013799919-ab600027ffc6","1600596542815-ffad4c1539a9","1512917774080-9991f1c4c750"],desc:"A bright, ventilated third-floor home near D.A.V. School and Mausam Vihar Park, with lift, stilt parking and a sunlit balcony.",am:["Parking","Security","Balcony","Power Backup"]},  
+{id:"modern-corner-home",name:"Modern Corner Home",loc:"Krishna Nagar",type:"Modern Homes",mode:"buy",price:340,beds:4,baths:3,area:2400,park:2,year:2023,furn:"Semi-furnished",pop:76,date:"2026-10-01",feat:0,st:"sold",imgs:["1580587771525-78b9dba3b914","1512917774080-9991f1c4c750","1600585154340-be6161a56a0c"],desc:"Clean lines, a modular kitchen and a rooftop lounge in a well-connected pocket of Krishna Nagar. Move-in ready.",am:["Parking","Garden","Balcony","Air Conditioning","Power Backup"]},  
+{id:"park-facing-3bhk",name:"Park-Facing 3 BHK",loc:"Gagan Vihar",type:"Apartments",mode:"rent",price:1.1,priceTxt:"₹1.1 L / mo",beds:3,baths:2,area:1500,park:1,year:2020,furn:"Furnished",pop:70,date:"2026-09-30",feat:0,st:"rented",imgs:["1502672260266-1c1ef2d93688","1600607687939-ce8a6c25118c","1564013799919-ab600027ffc6"],desc:"A fully furnished, park-facing home on a quiet street — ideal for professionals and families seeking a turn-key lease.",am:["Parking","Security","Balcony","Air Conditioning","Power Backup"]},  
+{id:"prime-retail-frontage",name:"Prime Retail Frontage",loc:"Krishna Nagar",type:"Commercial Properties",mode:"buy",price:450,beds:0,baths:2,area:1800,park:4,year:2019,furn:"Unfurnished",pop:65,date:"2026-08-25",feat:0,st:"rented",imgs:["1486406146926-c627a92ad1ab","1497366216548-37526070297c","1577495508048-b635879837f1"],desc:"A high-footfall ground-floor showroom on a main road with double-height ceilings and dedicated customer parking.",am:["Parking","Security","Power Backup","Air Conditioning"]}  
 ];  
 P.forEach(p=>{p.imgs=p.imgs.map(i=>U(i));p.priceTxt=p.priceTxt||(p.price>=100?"₹"+(p.price/100).toFixed(2).replace(/\.?0+$/,"")+" Cr":"₹"+p.price+" L")});  
-const CATS=[["Luxury Villas","1613490493576-7fde63acd811"],["Apartments","1545324418-cc1a3fa10c00"],["Penthouses","1600566753190-17f0baa2a6c3"],["Modern Homes","1580587771525-78b9dba3b914"],["Commercial Properties","1486406146926-c627a92ad1ab"],["Land & Plots","1500382017468-9049fed747ef"]];  
+  const CATS=[["Luxury Villas","1613490493576-7fde63acd811"],["Apartments","1545324418-cc1a3fa10c00"],["Penthouses","1600566753190-17f0baa2a6c3"],["Modern Homes","1580587771525-78b9dba3b914"],["Commercial Properties","1486406146926-c627a92ad1ab"],["Land & Plots","1500382017468-9049fed747ef"]];  
 const AMS=["Swimming Pool","Gym","Parking","Security","Garden","Balcony","Smart Home","Air Conditioning","Power Backup","Clubhouse"];  
 const IC={  
 pin:'<path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',bed:'<path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/>',bath:'<path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM6 12V6a2 2 0 0 1 4 0"/>',area:'<path d="M4 4h16v16H4zM4 10h8v10"/>',heart:'<path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/>',arr:'<path d="M5 12h14M13 6l6 6-6 6"/>',  
