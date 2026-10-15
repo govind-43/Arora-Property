@@ -29,7 +29,7 @@
 <header id="hd"><div class="wrap nav">
 <a href="#home" class="logo" aria-label="Arora Properties home"><b>A</b><span>Arora<small>Properties</small></span></a>
 <nav aria-label="Main"><ul id="menu">
-<li><a class="l" href="#home">Home</a></li><li><a class="l" href="#properties">Properties</a></li><li><a class="l" href="#properties" data-mode="buy">Buy</a></li><li><a class="l" href="#properties" data-mode="rent">Rent</a></li><li><a class="l" href="#sell">Sell</a></li><li><a class="l" href="#about">About</a></li><li><a class="l" href="#services">Services</a></li><li><a class="l" href="#contact">Contact</a></li></ul></nav>
+<li><a class="l" href="#home">Home</a></li><li><a class="l" href="#properties">Properties</a></li><li><a class="l" href="#properties" data-mode="buy">Buy</a></li><li><a class="l" href="#properties" data-mode="rent">Rent</a></li><li><a class="l" href="#projects">Projects</a></li><li><a class="l" href="#sell">Sell</a></li><li><a class="l" href="#about">About</a></li><li><a class="l" href="#services">Services</a></li><li><a class="l" href="#contact">Contact</a></li></ul></nav>
 <div style="display:flex;gap:10px;align-items:center"><button class="btn p hcta mag" data-book>Schedule a Viewing</button>
 <button class="burger" id="bg" aria-label="Menu" aria-expanded="false"><span></span></button></div>
 </div></header>
@@ -75,6 +75,18 @@
 <div class="wg" id="wg"></div></div></section>
 <section><div class="wrap center"><div class="rv"><span class="eyebrow">How it works</span><h2>Four steps to your keys</h2></div>
 <div class="steps rv"><div class="st"><i>01</i><h3>Discover</h3><p>Tell us what you're looking for.</p></div><div class="st"><i>02</i><h3>Explore</h3><p>Browse properties matching your requirements.</p></div><div class="st"><i>03</i><h3>Visit</h3><p>Schedule a private property viewing.</p></div><div class="st"><i>04</i><h3>Own</h3><p>Complete the process with expert guidance.</p></div></div></div></section>
+
+<!-- ===== PROJECTS / DEAL HISTORY SECTION ===== -->
+<section class="projects" id="projects"><div class="wrap">
+  <div class="center rv">
+    <span class="eyebrow">Our track record</span>
+    <h2>Projects &amp; Deal History</h2>
+    <p class="lead">A look at the families we've helped and the properties we've successfully closed across East Delhi.</p>
+  </div>
+  <div class="ps" id="ps"></div>
+  <div class="pj" id="pj"></div>
+</div></section>
+
 <section class="sell" id="sell"><div class="wrap two">
 <div class="img rv"><img data-par src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=75" alt="Handing over keys to a new home owner" loading="lazy" onerror="this.remove()"></div>
 <div class="rv"><span class="eyebrow">For property owners</span><h2>Thinking About Selling Your Property?</h2><p class="lead">From the first valuation to the final registry, we manage every detail so you get the best price with none of the stress.</p>
@@ -168,7 +180,7 @@ header.s{background:rgba(246,241,231,.92);backdrop-filter:blur(14px);color:var(-
 .logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.55rem;font-weight:700}
 .logo b{width:40px;height:40px;border-radius:12px;background:var(--cop);color:#fff;display:grid;place-items:center;font-size:1.3rem}
 .logo small{display:block;font:600 .55rem var(--sans);letter-spacing:.3em;text-transform:uppercase;opacity:.75;margin-top:-4px}
-nav ul{display:flex;gap:30px;list-style:none}
+nav ul{display:flex;gap:26px;list-style:none}
 nav a.l{font-size:.88rem;font-weight:600;position:relative;padding:6px 0}
 nav a.l:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--cop);transform:scaleX(0);transform-origin:left;transition:.35s var(--ease)}
 nav a.l:hover:after,nav a.l.act:after{transform:scaleX(1)}
@@ -355,6 +367,36 @@ body.hero-in .hero h1 em:after{content:"";position:absolute;left:0;right:0;botto
 .pc.is-sold .pi img,.pc.is-rented .pi img{filter:grayscale(.6) brightness(.9)}
 .pc.is-sold .pi .pp,.pc.is-rented .pi .pp{opacity:.35}
 
+/* ===== ADD-ON 6 : Projects / Deal History section ===== */
+.projects{background:var(--bone)}
+.ps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:44px 0 52px}
+.ps>div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 18px;text-align:center;box-shadow:var(--sh);transition:.4s var(--ease)}
+.ps>div:hover{border-color:var(--cop);transform:translateY(-4px)}
+.ps svg{width:28px;height:28px;color:var(--cop);margin-bottom:12px}
+.ps b{display:block;font:600 clamp(2rem,3.6vw,2.9rem)/1 var(--serif);color:var(--ink);margin-bottom:8px}
+.ps span{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.pj{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:26px}
+.pjc{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:.45s var(--ease);display:flex;flex-direction:column;cursor:pointer}
+.pjc:hover{transform:translateY(-6px);box-shadow:var(--sh2)}
+.pji{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,var(--sand),#CDBE9F)}
+.pji img{width:100%;height:100%;object-fit:cover;transition:.7s var(--ease)}
+.pjc:hover .pji img{transform:scale(1.06)}
+.pji:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,48,43,.72));pointer-events:none}
+.pjb{position:absolute;top:14px;left:14px;z-index:2;font:700 .65rem var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px;color:#fff;background:var(--cop)}
+.pjb.sold{background:#B3392F}.pjb.rented{background:var(--cop)}
+.pjy{position:absolute;top:14px;right:14px;z-index:2;background:rgba(255,255,255,.94);color:var(--ink);font:700 .72rem var(--sans);padding:6px 12px;border-radius:999px}
+.pjv{position:absolute;bottom:14px;left:16px;right:16px;z-index:2;color:#fff;font:600 1.35rem var(--serif);line-height:1.15}
+.pjv small{display:block;font:700 .62rem var(--sans);letter-spacing:.16em;text-transform:uppercase;opacity:.88;margin-bottom:4px}
+.pjp{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pjp h3{font-size:1.25rem;line-height:1.2}
+.pjm{display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;color:var(--mut);align-items:center}
+.pjm span{display:flex;gap:5px;align-items:center}
+.pjm svg{width:14px;height:14px;color:var(--cop)}
+.pjt{font-size:.85rem;color:var(--mut);font-style:italic;padding-left:12px;border-left:2px solid var(--cop);margin-top:2px;line-height:1.55}
+.pjc .vb{margin-top:auto;font-size:.82rem;padding-top:6px}
+@media(max-width:900px){.ps{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.ps{grid-template-columns:1fr}}
+
 @media(prefers-reduced-motion:reduce){
   body.hero-in .hero .eyebrow,
   body.hero-in .hero h1 .hw,
@@ -533,9 +575,46 @@ const hd=$("#hd"),hb=$("#hbg"),tp=$("#top"),pars=$$("[data-par]");let tick=false
 function onS(){const y=scrollY;hd.classList.toggle("s",y>50||$("#menu").classList.contains("open"));tp.classList.toggle("show",y>700);if(y<innerHeight*1.2)hb.style.transform=`translate3d(0,${y*.25}px,0)`;pars.forEach(p=>{const r=p.parentElement.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)p.style.transform=`translate3d(0,${(r.top-innerHeight/2)*-.06-20}px,0)`});tick=false}
 addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(onS)}},{passive:true});onS();
 tp.onclick=()=>scrollTo({top:0,behavior:"smooth"});
-const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$("nav a.l").forEach(a=>a.classList.toggle("act",a.getAttribute("href")==="#"+e.target.id&&!a.dataset.mode))}),{rootMargin:"-45% 0px -50%"});["home","properties","sell","about","services","contact"].forEach(i=>so.observe($("#"+i)));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$("nav a.l").forEach(a=>a.classList.toggle("act",a.getAttribute("href")==="#"+e.target.id&&!a.dataset.mode))}),{rootMargin:"-45% 0px -50%"});["home","properties","projects","sell","about","services","contact"].forEach(i=>so.observe($("#"+i)));
 const bg=$("#bg"),mn=$("#menu");bg.onclick=()=>{const o=mn.classList.toggle("open");bg.setAttribute("aria-expanded",o);onS()};$$("#menu a").forEach(a=>a.addEventListener("click",()=>{mn.classList.remove("open");bg.setAttribute("aria-expanded",false)}));
 if(matchMedia("(pointer:fine)").matches)$$(".mag").forEach(b=>{b.onmousemove=e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.25}px)`};b.onmouseleave=()=>b.style.transform=""});
+
+/* ===== ADD-ON 6 : Projects / Deal History Section ===== */
+const PROJ_STATS=[
+  ["500","Total Deals Closed","home"],
+  ["380","Properties Sold","ok"],
+  ["120","Homes Rented","key"],
+  ["₹500 Cr","Total Deal Value","chart"]
+];
+const PROJ=[
+  {name:"The Courtyard Residence",loc:"Gagan Vihar",type:"Luxury Villa",st:"sold",year:"2025",client:"Mr. & Mrs. Sharma",value:"₹6.20 Cr",days:"42 days",img:"1613490493576-7fde63acd811",quote:"Smooth, transparent and truly professional."},
+  {name:"Skyline Penthouse",loc:"Preet Vihar",type:"Penthouse",st:"sold",year:"2025",client:"Mr. Rajesh Khanna",value:"₹8.95 Cr",days:"58 days",img:"1545324418-cc1a3fa10c00",quote:"Got a better price than I expected."},
+  {name:"Mausam Vihar Builder Floor",loc:"Mausam Vihar",type:"Builder Floor",st:"sold",year:"2024",client:"Mrs. Anita Verma",value:"₹1.85 Cr",days:"35 days",img:"1564013799919-ab600027ffc6",quote:"Every document was handled properly."},
+  {name:"Park-Facing 3 BHK",loc:"Gagan Vihar",type:"Apartment",st:"rented",year:"2025",client:"Mr. Arjun Mehta",value:"₹1.1 L / mo",days:"12 days",img:"1502672260266-1c1ef2d93688",quote:"Turn-key home exactly as promised."},
+  {name:"Prime Retail Frontage",loc:"Krishna Nagar",type:"Commercial",st:"sold",year:"2024",client:"Sunrise Traders Pvt. Ltd.",value:"₹4.50 Cr",days:"64 days",img:"1486406146926-c627a92ad1ab",quote:"Best high-street location in the area."},
+  {name:"Modern Corner Home",loc:"Krishna Nagar",type:"Modern Home",st:"sold",year:"2025",client:"The Gupta Family",value:"₹3.40 Cr",days:"28 days",img:"1580587771525-78b9dba3b914",quote:"Felt like family, not a transaction."},
+  {name:"Furnished 4 BHK Floor",loc:"Preet Vihar",type:"Apartment",st:"rented",year:"2025",client:"Diplomat Family",value:"₹2.20 L / mo",days:"18 days",img:"1600566753190-17f0baa2a6c3",quote:"Exactly the kind of tenant we wanted."},
+  {name:"Showroom on Main Road",loc:"Krishna Nagar",type:"Commercial",st:"rented",year:"2024",client:"Fashion Retail Brand",value:"₹3.50 L / mo",days:"22 days",img:"1497366216548-37526070297c",quote:"Great footfall, closed in 3 weeks."}
+];
+$("#ps").innerHTML=PROJ_STATS.map(s=>`<div class="rv">${ico(s[2])}<b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
+$("#pj").innerHTML=PROJ.map(p=>`<article class="pjc rv" tabindex="0" aria-label="${p.name} — ${p.st}">
+  <div class="pji">
+    <img src="${U(p.img,700)}" alt="${p.name}, ${p.loc}" loading="lazy" onerror="this.remove()">
+    <span class="pjb ${p.st}">${p.st==="sold"?"Sold":"Rented"}</span>
+    <span class="pjy">${p.year}</span>
+    <div class="pjv"><small>${p.type} · ${p.loc}</small>${p.value}</div>
+  </div>
+  <div class="pjp">
+    <h3>${p.name}</h3>
+    <div class="pjm">
+      <span>${ico("user")}${p.client}</span>
+      <span>${ico("clock")}Closed in ${p.days}</span>
+    </div>
+    <p class="pjt">"${p.quote}"</p>
+    <a class="vb" href="#contact">Similar Property Enquiry ${ico("arr")}</a>
+  </div>
+</article>`).join("");
+
 /* ===== init ===== */
 revealNew();
 $("#feat").innerHTML=skel(3);setTimeout(()=>{$("#feat").innerHTML=P.filter(p=>p.feat).map(card).join("");revealNew()},500);
@@ -567,7 +646,7 @@ addEventListener("load",()=>setTimeout(()=>$("#pt").classList.add("out"),250));s
 
 /* ===== ADD-ON 2 : TAP ANIMATION ON ALL CARD SECTIONS ===== */
 (function(){
-  const TAPPABLE=".pc,.cat,.svc,.tc,.ar2,.st,.wg>div,.sg>div";
+  const TAPPABLE=".pc,.cat,.svc,.tc,.ar2,.st,.wg>div,.sg>div,.pjc,.ps>div";
   document.addEventListener("pointerdown",e=>{
     const c=e.target.closest(TAPPABLE);
     if(!c)return;
